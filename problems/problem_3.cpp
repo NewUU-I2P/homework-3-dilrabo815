@@ -2,22 +2,23 @@
 using namespace std;
 string problemSolution3(float height, char S) {
     string result;
-    if (S == 'M') {
-        if (height < 1.70) {
-            result = "short";
-        } else if (height >= 1.7 && height < 1.85) {
-            result = "normal";
-        } else {
-            result = "tall";
+    if(S == 'M') {
+        if(height < 1.70) {
+            result = "Short";
+        } else if(height > 1.70 and height < 1.85) {
+            result = "Normal";
+        } else if(height > 1.85) {
+            result = "Tall";
         }
-    } else if (S == 'F') {
-        if (height < 1.6) {
-            result = "short";
-        } else if (height >= 1.6 && height < 1.75) {
-            result = "normal";
+    } else if(S == 'F') {
+        if(height < 1.60) {
+            result = "Short";
+        } else if(height > 1.60 and height < 1.75) {
+            result = "Normal";
         } else {
-            result = "tall";
+            result = "Tall";
         }
     }
     return result;
+    
 }
